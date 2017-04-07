@@ -1,6 +1,7 @@
 # Flux
 
 In the project i have a file with the JSON structure that i am working on. Right now i just have a simple nodejs server returning this JSON upon request.
+https://github.com/MonkeyJumps/SimpleNodeJsServer
 
 Document 
    DocumentName
