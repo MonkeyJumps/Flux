@@ -16,7 +16,7 @@ export function getDocuments () {
     };
 }
 //returns action object consisting of type and action where type is always what the reducer is looking for
-export function setDocuments(documents){
+export function setDocuments(documents){    
     return {
         type: SET_DOCUMENTS,
         documents

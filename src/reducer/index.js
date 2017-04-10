@@ -4,11 +4,13 @@
 import {combineReducers} from 'redux';
 import documents from './documents';
 import document from './document';
+import record from './record';
 
 
 export default combineReducers({
     documents,
-    document
+    document,
+    record
 });
 
 

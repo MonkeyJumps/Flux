@@ -12,6 +12,7 @@ export default (state = initialState, action) => {
     //match on action.type
     switch (action.type){
         case SET_DOCUMENTS:
+        const documents = action.documents;
             return action.documents;
         default:
             return state;

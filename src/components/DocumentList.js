@@ -5,11 +5,12 @@ import {connect } from 'react-redux';
 import {
     setCurrentDocument,
     setCurrentPages,
+    setCurrentRecords
 } from '../reducer/document/actions';
 
 
 //Since we know that props are what is passed to a funcitonal component so we know we can pull them out and use them.
-const DocumentList = ({documents, setDocument }) => 
+const DocumentList = ({documents,setDocument }) => 
     <div id="documentList" className="col-md-6">
         <h1>Documents</h1>
         <ul>
@@ -23,7 +24,7 @@ const DocumentList = ({documents, setDocument }) =>
 
 
 // store or state is going to be passed as an object use object destructuring to pull out only what we need. then return filtered object containg only the documents.
-const mapStateToProps=( { documents })=>({
+const mapStateToProps=(  { documents })=>({    
     documents
 });
 
@@ -32,10 +33,11 @@ const mapStateToProps=( { documents })=>({
 //our setDocument function is actually going to be a curry function where we are going to return another function from it. This will create a closure and keep the scope of the id
 //for us to use later in the onclick event and after the map function runs
 const mapDispatchToProps = dispatch => ({
-    setDocument(document){
+    setDocument(document){            
         return () => {
             dispatch(setCurrentDocument(document))
             dispatch(setCurrentPages(document.Pages))
+            dispatch(setCurrentRecords(document.Records))
         };
     }
 });
