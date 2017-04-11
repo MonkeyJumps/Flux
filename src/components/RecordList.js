@@ -4,7 +4,7 @@ import {connect } from 'react-redux';
 //make sure to bring the action creator from the actions file
 
 import {
-    setCurrentRecord
+    setCurrentRecord    
 } from '../reducer/record/actions';
 
 //Since we know that props are what is passed to a funcitonal component so we know we can pull them out and use them.
@@ -31,7 +31,7 @@ const mapStateToProps=( {document: { records }})=>({
 const mapDispatchToProps = dispatch => ({
     setRecord(record){
         return () =>{
-            dispatch(setCurrentRecord(record));            
+            dispatch(setCurrentRecord(record));                     
         };
     }
 });

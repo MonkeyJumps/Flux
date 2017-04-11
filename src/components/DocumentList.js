@@ -37,7 +37,7 @@ const mapDispatchToProps = dispatch => ({
         return () => {
             dispatch(setCurrentDocument(document))
             dispatch(setCurrentPages(document.Pages))
-            dispatch(setCurrentRecords(document.Records))
+            dispatch(setCurrentRecords(document.Records))            
         };
     }
 });
